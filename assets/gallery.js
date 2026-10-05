@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
       returnFocusElement = link;
       
       const grid = link.closest('.gallery-grid') || link.parentElement;
-      activeCollection = Array.from(grid.querySelectorAll('.gallery-item'));
+      activeCollection = Array.from(grid.querySelectorAll('.gallery-item:not(.hidden)'));
       
       const idx = activeCollection.indexOf(link);
       openGallery(idx > -1 ? idx : 0);

@@ -243,4 +243,124 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }, { passive: true });
   }
+
+  // Homepage Hero Video Control
+  const video = document.getElementById("hero-video");
+  const toggleBtn = document.getElementById("video-toggle");
+  if (video && toggleBtn) {
+    video.setAttribute("poster", "/assets/images/Professional%20Headshot.jpg");
+
+    const pauseIcon = '<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
+    const playIcon = '<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+
+    let userPaused = false;
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    const setPausedState = () => {
+      video.pause();
+      toggleBtn.innerHTML = playIcon;
+      toggleBtn.setAttribute('aria-label', 'Play animation');
+    };
+    
+    const setPlayState = () => {
+      const playPromise = video.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => setPausedState());
+      }
+      toggleBtn.innerHTML = pauseIcon;
+      toggleBtn.setAttribute('aria-label', 'Pause animation');
+    };
+
+    if (prefersReducedMotion) {
+      userPaused = true;
+      setPausedState();
+    }
+
+    toggleBtn.addEventListener("click", () => {
+      if (video.paused) {
+        userPaused = false;
+        setPlayState();
+      } else {
+        userPaused = true;
+        setPausedState();
+      }
+    });
+
+    const handleVisibility = (isVisible) => {
+      if (!isVisible && !video.paused) {
+        setPausedState();
+      } else if (isVisible && !userPaused) {
+        setPlayState();
+      }
+    };
+
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => handleVisibility(entry.isIntersecting));
+      }, { threshold: 0.1 });
+      observer.observe(video);
+    }
+    
+    document.addEventListener("visibilitychange", () => {
+      handleVisibility(!document.hidden);
+    });
+  }
+
+  // Gaming Journal Screenshot Filtering
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const gameItems = document.querySelectorAll('.gallery-item[data-game]');
+  const screenshotGrid = document.getElementById('screenshot-grid');
+  const announcer = document.getElementById('filter-announcer');
+
+  if (filterButtons.length > 0 && screenshotGrid) {
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-filter');
+        const gameTitle = btn.innerText;
+
+        filterButtons.forEach(b => {
+          b.classList.remove('active');
+          b.classList.add('btn-outline');
+          b.setAttribute('aria-pressed', 'false');
+        });
+        btn.classList.add('active');
+        btn.classList.remove('btn-outline');
+        btn.setAttribute('aria-pressed', 'true');
+
+        let count = 0;
+        gameItems.forEach(item => {
+          if (filter === 'all' || item.getAttribute('data-game') === filter) {
+            item.classList.remove('hidden');
+            item.style.display = 'block';
+            count++;
+          } else {
+            item.classList.add('hidden');
+            item.style.display = 'none';
+          }
+        });
+
+        screenshotGrid.className = 'gallery-grid interests-gallery';
+        if (count === 1) {
+          screenshotGrid.classList.add('grid-layout-1');
+        } else if (count === 2) {
+          screenshotGrid.classList.add('grid-layout-2');
+        } else {
+          screenshotGrid.classList.add('grid-layout-multi');
+        }
+
+        if (announcer) {
+          announcer.textContent = `Showing ${count} screenshot${count !== 1 ? 's' : ''} for ${gameTitle}.`;
+        }
+      });
+    });
+
+    const allCount = gameItems.length;
+    if (allCount === 1) {
+      screenshotGrid.classList.add('grid-layout-1');
+    } else if (allCount === 2) {
+      screenshotGrid.classList.add('grid-layout-2');
+    } else {
+      screenshotGrid.classList.add('grid-layout-multi');
+    }
+  }
 });

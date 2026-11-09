@@ -8,6 +8,8 @@
   <meta property="og:title" content="Bradon Gaathe Macharia | Professional Portfolio">
   <meta property="og:description" content="IT Support &amp; Technical Operations | Digital Forensics &amp; Cybersecurity | CompTIA Security+">
   <meta property="og:type" content="website">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self';">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
@@ -190,75 +192,6 @@
     </div>
   </div>
 </div>
-
-<script>
-  // Video control script
-  document.addEventListener("DOMContentLoaded", () => {
-    const video = document.getElementById("hero-video");
-    const toggleBtn = document.getElementById("video-toggle");
-    
-    if(!video || !toggleBtn) return;
-
-    // Add poster
-    video.setAttribute("poster", "/assets/images/Professional%20Headshot.jpg");
-
-    const pauseIcon = '<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>';
-    const playIcon = '<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
-
-    let userPaused = false;
-    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-    const setPausedState = () => {
-      video.pause();
-      toggleBtn.innerHTML = playIcon;
-      toggleBtn.setAttribute('aria-label', 'Play animation');
-    };
-    
-    const setPlayState = () => {
-      const playPromise = video.play();
-      if (playPromise !== undefined) {
-        playPromise.catch(() => setPausedState());
-      }
-      toggleBtn.innerHTML = pauseIcon;
-      toggleBtn.setAttribute('aria-label', 'Pause animation');
-    };
-
-    if (prefersReducedMotion) {
-      userPaused = true;
-      setPausedState();
-    }
-
-    toggleBtn.addEventListener("click", () => {
-      if (video.paused) {
-        userPaused = false;
-        setPlayState();
-      } else {
-        userPaused = true;
-        setPausedState();
-      }
-    });
-
-    // Pause when off-screen or tab hidden, but respect manual play/pause
-    const handleVisibility = (isVisible) => {
-      if (!isVisible && !video.paused) {
-        setPausedState();
-      } else if (isVisible && !userPaused) {
-        setPlayState();
-      }
-    };
-
-    if ('IntersectionObserver' in window) {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => handleVisibility(entry.isIntersecting));
-      }, { threshold: 0.1 });
-      observer.observe(video);
-    }
-    
-    document.addEventListener("visibilitychange", () => {
-      handleVisibility(!document.hidden);
-    });
-  });
-</script>
 
   </main>
 

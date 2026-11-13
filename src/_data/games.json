@@ -1,324 +1,98 @@
 [
   {
-    "id": "skyrim",
-    "title": "The Elder Scrolls V: Skyrim",
-    "rank": 1
+    "rank": 1,
+    "title": "The Elder Scrolls V: Skyrim"
   },
   {
-    "id": "gow2018",
-    "title": "God of War (2018)",
-    "rank": 2
+    "rank": 2,
+    "title": "God of War (2018)"
   },
   {
-    "id": "expedition33",
-    "title": "Clair Obscur: Expedition 33",
     "rank": 3,
-    "screenshots": [
-      {
-        "path": "/assets/images/gaming/expedition33_1.jpg",
-        "caption": "Underwater debris and structures",
-        "alt_text": "A character looking at large underwater structures and floating debris"
-      },
-      {
-        "path": "/assets/images/gaming/expedition33_2.jpg",
-        "caption": "Surreal landscape in Expedition 33 (2)",
-        "alt_text": "A view of the striking art direction and environments in Expedition 33"
-      },
-      {
-        "path": "/assets/images/gaming/expedition33_3.jpg",
-        "caption": "Surreal landscape in Expedition 33 (3)",
-        "alt_text": "A view of the striking art direction and environments in Expedition 33"
-      },
-      {
-        "path": "/assets/images/gaming/expedition33_4.jpg",
-        "caption": "Surreal landscape in Expedition 33 (4)",
-        "alt_text": "A view of the striking art direction and environments in Expedition 33"
-      }
-    ]
+    "title": "Clair Obscur: Expedition 33"
   },
   {
-    "id": "vice-city",
-    "title": "Grand Theft Auto: Vice City",
-    "rank": 4
+    "rank": 4,
+    "title": "Grand Theft Auto: Vice City"
   },
   {
-    "id": "wukong",
-    "title": "Black Myth: Wukong",
     "rank": 5,
-    "screenshots": [
-      {
-        "path": "/assets/images/gaming/wukong_1.jpg",
-        "caption": "Destined One gameplay moment 1",
-        "alt_text": "The Destined One exploring the environment in Black Myth Wukong"
-      },
-      {
-        "path": "/assets/images/gaming/wukong_2.jpg",
-        "caption": "Destined One gameplay moment 2",
-        "alt_text": "The Destined One exploring the environment in Black Myth Wukong"
-      },
-      {
-        "path": "/assets/images/gaming/wukong_3.jpg",
-        "caption": "Destined One gameplay moment 3",
-        "alt_text": "The Destined One exploring the environment in Black Myth Wukong"
-      },
-      {
-        "path": "/assets/images/gaming/wukong_4.jpg",
-        "caption": "Destined One gameplay moment 4",
-        "alt_text": "The Destined One exploring the environment in Black Myth Wukong"
-      },
-      {
-        "path": "/assets/images/gaming/wukong_5.jpg",
-        "caption": "Destined One gameplay moment 5",
-        "alt_text": "The Destined One exploring the environment in Black Myth Wukong"
-      }
-    ]
+    "title": "Black Myth: Wukong"
   },
   {
-    "id": "arkham-city",
-    "title": "Batman: Arkham City",
-    "rank": 6
+    "rank": 6,
+    "title": "Batman: Arkham City"
   },
   {
-    "id": "bg3",
-    "title": "Baldur's Gate 3",
-    "rank": 7
+    "rank": 7,
+    "title": "Baldur's Gate 3"
   },
   {
-    "id": "ghost-of-tsushima",
-    "title": "Ghost of Tsushima",
     "rank": 8,
-    "screenshots": [
-      {
-        "path": "/assets/images/gaming/ghost-of-tsushima_1.jpg",
-        "caption": "Jin Sakai on horseback at sunrise",
-        "alt_text": "Jin Sakai riding a horse on a cliff looking at the sunrise and a pagoda"
-      },
-      {
-        "path": "/assets/images/gaming/ghost-of-tsushima_2.jpg",
-        "caption": "Scenic view of Tsushima (2)",
-        "alt_text": "Jin Sakai exploring the beautiful landscapes of Tsushima island"
-      },
-      {
-        "path": "/assets/images/gaming/ghost-of-tsushima_3.jpg",
-        "caption": "Scenic view of Tsushima (3)",
-        "alt_text": "Jin Sakai exploring the beautiful landscapes of Tsushima island"
-      },
-      {
-        "path": "/assets/images/gaming/ghost-of-tsushima_4.jpg",
-        "caption": "Scenic view of Tsushima (4)",
-        "alt_text": "Jin Sakai exploring the beautiful landscapes of Tsushima island"
-      },
-      {
-        "path": "/assets/images/gaming/ghost-of-tsushima_5.jpg",
-        "caption": "Scenic view of Tsushima (5)",
-        "alt_text": "Jin Sakai exploring the beautiful landscapes of Tsushima island"
-      },
-      {
-        "path": "/assets/images/gaming/ghost-of-tsushima_6.jpg",
-        "caption": "Scenic view of Tsushima (6)",
-        "alt_text": "Jin Sakai exploring the beautiful landscapes of Tsushima island"
-      },
-      {
-        "path": "/assets/images/gaming/ghost-of-tsushima_7.jpg",
-        "caption": "Scenic view of Tsushima (7)",
-        "alt_text": "Jin Sakai exploring the beautiful landscapes of Tsushima island"
-      },
-      {
-        "path": "/assets/images/gaming/ghost-of-tsushima_8.jpg",
-        "caption": "Scenic view of Tsushima (8)",
-        "alt_text": "Jin Sakai exploring the beautiful landscapes of Tsushima island"
-      },
-      {
-        "path": "/assets/images/gaming/ghost-of-tsushima_9.jpg",
-        "caption": "Scenic view of Tsushima (9)",
-        "alt_text": "Jin Sakai exploring the beautiful landscapes of Tsushima island"
-      },
-      {
-        "path": "/assets/images/gaming/ghost-of-tsushima_10.jpg",
-        "caption": "Scenic view of Tsushima (10)",
-        "alt_text": "Jin Sakai exploring the beautiful landscapes of Tsushima island"
-      },
-      {
-        "path": "/assets/images/gaming/ghost-of-tsushima_11.jpg",
-        "caption": "Scenic view of Tsushima (11)",
-        "alt_text": "Jin Sakai exploring the beautiful landscapes of Tsushima island"
-      },
-      {
-        "path": "/assets/images/gaming/ghost-of-tsushima_12.jpg",
-        "caption": "Scenic view of Tsushima (12)",
-        "alt_text": "Jin Sakai exploring the beautiful landscapes of Tsushima island"
-      },
-      {
-        "path": "/assets/images/gaming/ghost-of-tsushima_13.jpg",
-        "caption": "Scenic view of Tsushima (13)",
-        "alt_text": "Jin Sakai exploring the beautiful landscapes of Tsushima island"
-      },
-      {
-        "path": "/assets/images/gaming/ghost-of-tsushima_14.jpg",
-        "caption": "Scenic view of Tsushima (14)",
-        "alt_text": "Jin Sakai exploring the beautiful landscapes of Tsushima island"
-      },
-      {
-        "path": "/assets/images/gaming/ghost-of-tsushima_15.jpg",
-        "caption": "Scenic view of Tsushima (15)",
-        "alt_text": "Jin Sakai exploring the beautiful landscapes of Tsushima island"
-      },
-      {
-        "path": "/assets/images/gaming/ghost-of-tsushima_16.jpg",
-        "caption": "Scenic view of Tsushima (16)",
-        "alt_text": "Jin Sakai exploring the beautiful landscapes of Tsushima island"
-      },
-      {
-        "path": "/assets/images/gaming/ghost-of-tsushima_17.jpg",
-        "caption": "Scenic view of Tsushima (17)",
-        "alt_text": "Jin Sakai exploring the beautiful landscapes of Tsushima island"
-      },
-      {
-        "path": "/assets/images/gaming/ghost-of-tsushima_18.jpg",
-        "caption": "Scenic view of Tsushima (18)",
-        "alt_text": "Jin Sakai exploring the beautiful landscapes of Tsushima island"
-      },
-      {
-        "path": "/assets/images/gaming/ghost-of-tsushima_19.jpg",
-        "caption": "Scenic view of Tsushima (19)",
-        "alt_text": "Jin Sakai exploring the beautiful landscapes of Tsushima island"
-      },
-      {
-        "path": "/assets/images/gaming/ghost-of-tsushima_20.jpg",
-        "caption": "Scenic view of Tsushima (20)",
-        "alt_text": "Jin Sakai exploring the beautiful landscapes of Tsushima island"
-      },
-      {
-        "path": "/assets/images/gaming/ghost-of-tsushima_21.jpg",
-        "caption": "Scenic view of Tsushima (21)",
-        "alt_text": "Jin Sakai exploring the beautiful landscapes of Tsushima island"
-      },
-      {
-        "path": "/assets/images/gaming/ghost-of-tsushima_22.jpg",
-        "caption": "Scenic view of Tsushima (22)",
-        "alt_text": "Jin Sakai exploring the beautiful landscapes of Tsushima island"
-      },
-      {
-        "path": "/assets/images/gaming/ghost-of-tsushima_23.jpg",
-        "caption": "Scenic view of Tsushima (23)",
-        "alt_text": "Jin Sakai exploring the beautiful landscapes of Tsushima island"
-      }
-    ]
+    "title": "Ghost of Tsushima"
   },
   {
-    "id": "elden-ring",
-    "title": "Elden Ring",
-    "rank": 9
+    "rank": 9,
+    "title": "Elden Ring"
   },
   {
-    "id": "gow-ragnarok",
-    "title": "God of War Ragnarök",
     "rank": 10,
-    "screenshots": [
-      {
-        "path": "/assets/images/gaming/gow-ragnarok_1.jpg",
-        "caption": "Atreus watching a lightning strike",
-        "alt_text": "Atreus looking at a massive blue lightning strike in the snow"
-      },
-      {
-        "path": "/assets/images/gaming/gow-ragnarok_2.jpg",
-        "caption": "Kratos facing Hræsvelgr in Helheim",
-        "alt_text": "Kratos looking at a giant eagle in a green foggy environment"
-      },
-      {
-        "path": "/assets/images/gaming/gow-ragnarok_3.jpg",
-        "caption": "Kratos facing Hræsvelgr in Helheim",
-        "alt_text": "Kratos looking at a giant eagle in a green foggy environment"
-      }
-    ]
+    "title": "God of War Ragnarök"
   },
   {
-    "id": "hades-2",
-    "title": "Hades II",
-    "rank": 11
+    "rank": 11,
+    "title": "Hades II"
   },
   {
-    "id": "new-vegas",
-    "title": "Fallout: New Vegas",
-    "rank": 12
+    "rank": 12,
+    "title": "Fallout: New Vegas"
   },
   {
-    "id": "re2",
-    "title": "Resident Evil 2",
-    "rank": 13
+    "rank": 13,
+    "title": "Resident Evil 2"
   },
   {
-    "id": "pes-2016",
-    "title": "PES 2016",
-    "rank": 14
+    "rank": 14,
+    "title": "PES 2016"
   },
   {
-    "id": "fifa-14",
-    "title": "FIFA 14",
-    "rank": 15
+    "rank": 15,
+    "title": "FIFA 14"
   },
   {
-    "id": "hitman-2",
-    "title": "Hitman 2: Silent Assassin",
-    "rank": 16
+    "rank": 16,
+    "title": "Hitman 2: Silent Assassin"
   },
   {
-    "id": "tlou1",
-    "title": "The Last of Us Part I",
     "rank": 17,
-    "screenshots": [
-      {
-        "path": "/assets/images/gaming/tlou1_1.jpg",
-        "caption": "Joel and Ellie observing giraffes",
-        "alt_text": "Joel and Ellie looking out over an overgrown city with giraffes"
-      },
-      {
-        "path": "/assets/images/gaming/tlou1_2.jpg",
-        "caption": "Joel and Ellie near overgrown buildings",
-        "alt_text": "Joel and Ellie standing near brick buildings covered in vines"
-      }
-    ]
+    "title": "The Last of Us Part I"
   },
   {
-    "id": "hades-1",
-    "title": "Hades",
-    "rank": 18
+    "rank": 18,
+    "title": "Hades"
   },
   {
-    "id": "rdr2",
-    "title": "Red Dead Redemption 2",
-    "rank": 19
+    "rank": 19,
+    "title": "Red Dead Redemption 2"
   },
   {
-    "id": "kcd2",
-    "title": "Kingdom Come: Deliverance II",
-    "rank": 20
+    "rank": 20,
+    "title": "Kingdom Come: Deliverance II"
   },
   {
-    "id": "witcher-3",
-    "title": "The Witcher 3: Wild Hunt",
-    "rank": 21
+    "rank": 21,
+    "title": "The Witcher 3: Wild Hunt"
   },
   {
-    "id": "re-village",
-    "title": "Resident Evil Village",
     "rank": 22,
-    "screenshots": [
-      {
-        "path": "/assets/images/gaming/re-village_1.jpg",
-        "caption": "Castle Dimitrescu in the fog",
-        "alt_text": "A looming gothic castle surrounded by fog and snow"
-      }
-    ]
+    "title": "Resident Evil Village"
   },
   {
-    "id": "re4",
-    "title": "Resident Evil 4",
-    "rank": 23
+    "rank": 23,
+    "title": "Resident Evil 4"
   },
   {
-    "id": "castlevania-los",
-    "title": "Castlevania: Lords of Shadow",
-    "rank": 24
+    "rank": 24,
+    "title": "Castlevania: Lords of Shadow"
   }
 ]

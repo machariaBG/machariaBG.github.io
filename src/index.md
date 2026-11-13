@@ -1,45 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bradon Gaathe Macharia | Professional Portfolio</title>
-  <meta name="description" content="IT Support &amp; Technical Operations | Digital Forensics &amp; Cybersecurity | CompTIA Security+">
-  <meta property="og:title" content="Bradon Gaathe Macharia | Professional Portfolio">
-  <meta property="og:description" content="IT Support &amp; Technical Operations | Digital Forensics &amp; Cybersecurity | CompTIA Security+">
-  <meta property="og:type" content="website">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self';">
-  <meta name="referrer" content="strict-origin-when-cross-origin">
-  <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
-  <a href="#main-content" class="skip-link">Skip to main content</a>
-  
-  <header class="site-header">
-    <div class="container nav-wrapper">
-      <a href="/" class="logo" aria-label="Home">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <!-- Systems motif -->
-          <rect x="3" y="3" width="6" height="6" stroke-width="1.5" />
-          <rect x="15" y="15" width="6" height="6" stroke-width="1.5" />
-          <path d="M9 6h6v9" />
-          <circle cx="15" cy="6" r="1.5" fill="var(--color-amber)" stroke="none"/>
-        </svg>
-        Bradon
-      </a>
-      <nav class="main-nav" aria-label="Main Navigation">
-        <a href="/about/">About</a>
-        <a href="/experience/">Experience</a>
-        <a href="/home-labs/">Home Labs</a>
-        <a href="/apps/">Apps</a>
-        <a href="/interests/">Interests</a>
-        <a href="/contact/">Contact</a>
-      </nav>
-    </div>
-  </header>
+---
+layout: base.njk
+title: Bradon Gaathe Macharia | Professional Portfolio
+description: IT Support & Technical Operations | Digital Forensics & Cybersecurity | CompTIA Security+
+templateEngineOverride: njk
+---
 
-  <main id="main-content" tabindex="-1">
-    
 <div class="container animate-entrance">
   <section class="hero grid">
     <div class="hero-content">
@@ -192,34 +157,3 @@
     </div>
   </div>
 </div>
-
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <div class="social-links" style="display:flex; gap:1.5rem; margin-bottom:1rem;">
-        <a href="https://github.com/machariaBG" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://www.linkedin.com/in/macharia-brandon-1077971b8/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="/cv/">CV</a>
-      </div>
-      <p>Bradon Gaathe Macharia. Field Notes &copy; 2026. Built with Eleventy.</p>
-    </div>
-  </footer>
-
-  <dialog id="gallery-dialog" class="gallery-dialog" aria-label="Image Gallery">
-    <button class="lb-btn lb-close" aria-label="Close gallery" formmethod="dialog">×</button>
-    <div class="lb-wrapper">
-      <button class="lb-btn lb-prev" aria-label="Previous image">‹</button>
-      <img class="lb-img" id="lb-current-img" src="" alt="">
-      <button class="lb-btn lb-next" aria-label="Next image">›</button>
-    </div>
-    <div class="lb-info" aria-live="polite">
-      <span class="lb-title" id="lb-title"></span>
-      <span class="lb-counter" id="lb-counter"></span>
-    </div>
-    <div class="lb-thumbs" id="lb-thumbs"></div>
-  </dialog>
-
-  <script src="/assets/gallery.js" defer></script>
-</body>
-</html>

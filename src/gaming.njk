@@ -1,0 +1,100 @@
+---
+layout: base.njk
+title: Gaming Journal
+templateEngineOverride: njk
+---
+{% macro gaming_item(url, label, src, alt, title, medium, game_id) %}
+<a href="{{ url }}" class="gallery-item" data-game="{{ game_id }}" aria-label="{{ label }}">
+  <img src="{{ src }}" alt="{{ alt }}" loading="lazy" width="400" height="225" style="object-fit: cover; aspect-ratio: 16/9;">
+  <div class="gallery-caption">
+    <span class="gallery-title">{{ title }}</span>
+    <span class="gallery-medium">{{ medium }}</span>
+  </div>
+</a>
+{% endmacro %}
+
+<style>
+.grid-layout-1 {
+  display: flex !important;
+  justify-content: center;
+}
+.grid-layout-1 .gallery-item {
+  max-width: 600px;
+  width: 100%;
+}
+.grid-layout-2 {
+  grid-template-columns: repeat(2, 1fr) !important;
+}
+.grid-layout-multi {
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)) !important;
+}
+@media (max-width: 600px) {
+  .grid-layout-2, .grid-layout-multi {
+    grid-template-columns: 1fr !important;
+  }
+}
+</style>
+
+<div class="container section animate-entrance">
+  <div class="case-study-header">
+    <span class="annotation">Gaming</span>
+    <h1 class="display-font">My Favourite Games</h1>
+    <p style="font-size: 1.15rem; color: var(--color-ink-light); max-width: 600px;">
+      A ranked list of the titles that left a lasting impression on me, along with some of my favourite screenshots captured along the way.
+      <br><br>
+      <a href="#screenshot-gallery" class="btn btn-outline" style="font-size: 0.9rem; padding: 0.4rem 0.8rem;">Browse Screenshots &darr;</a>
+    </p>
+  </div>
+
+  <div class="games-list" style="margin-top: var(--space-xl);">
+    {% for game in games | sort(attribute='rank') %}
+      <div class="game-card {% if game.rank <= 3 %}top-three{% endif %}" style="margin-bottom: var(--space-md); padding: var(--space-sm) 0; {% if game.rank <= 3 %}border-bottom: 2px solid var(--color-teal);{% else %}border-bottom: 1px solid var(--color-line);{% endif %}">
+        <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: var(--space-sm);">
+          <h2 class="display-font" style="margin-bottom: 0; {% if game.rank > 3 %}font-size: 1.25rem;{% else %}font-size: 1.75rem;{% endif %}">
+            <span style="color: var(--color-teal); font-weight: bold; margin-right: 0.5rem;">#{{ game.rank }}</span> {{ game.title }}
+          </h2>
+          {% if game.platform %}<span class="annotation">{{ game.platform }}</span>{% endif %}
+        </div>
+        
+        {% if game.review %}
+          <p style="margin-top: var(--space-sm); color: var(--color-ink); margin-bottom: 0;">{{ game.review }}</p>
+        {% endif %}
+        
+        {% if game.favourite_moment %}
+          <p style="font-size: 0.9rem; border-left: 2px solid var(--color-amber); padding-left: var(--space-sm); margin-top: var(--space-sm); margin-bottom: 0;">
+            <strong>Favourite Moment:</strong> {{ game.favourite_moment }}
+          </p>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+
+  <div id="screenshot-gallery" class="screenshots-section" style="margin-top: var(--space-2xl); scroll-margin-top: 100px;">
+    <h2 class="display-font" style="border-bottom: 1px solid var(--color-line); padding-bottom: var(--space-xs);">Screenshot Gallery</h2>
+    
+    <div class="gallery-filters" role="group" aria-label="Screenshot Filters" style="margin-top: var(--space-md); margin-bottom: var(--space-lg); display: flex; flex-wrap: wrap; gap: 0.5rem;">
+      <button class="btn filter-btn active" data-filter="all" aria-pressed="true" style="padding: 0.35rem 0.75rem; font-size: 0.85rem;">All Games</button>
+      {% for game in games | sort(attribute='rank') %}
+        {% if game.screenshots and game.screenshots.length > 0 %}
+          <button class="btn btn-outline filter-btn" data-filter="{{ game.id }}" aria-pressed="false" style="padding: 0.35rem 0.75rem; font-size: 0.85rem;">{{ game.title }}</button>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <div id="filter-announcer" aria-live="polite" class="sr-only" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0;">
+      Showing all screenshots.
+    </div>
+
+    <!-- ONE Unified Grid -->
+    <div id="screenshot-grid" class="gallery-grid interests-gallery grid-layout-multi">
+      {% for game in games | sort(attribute='rank') %}
+        {% if game.screenshots %}
+          {% for shot in game.screenshots %}
+            {{ gaming_item(shot.path, "View screenshot from " + game.title, shot.path, shot.alt_text, shot.caption, game.title, game.id) }}
+          {% endfor %}
+        {% endif %}
+      {% endfor %}
+    </div>
+
+  </div>
+</div>

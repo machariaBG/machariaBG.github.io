@@ -1,0 +1,9 @@
+{% macro render(item) %}
+<a href="{{ item.url }}" class="gallery-item" aria-label="{{ item.label }}">
+  <img src="{{ item.src }}" alt="{{ item.alt }}">
+  <div class="gallery-caption">
+    <span class="gallery-title">{{ item.title }}</span>
+    <span class="gallery-medium">{{ item.medium }}</span>
+  </div>
+</a>
+{% endmacro %}

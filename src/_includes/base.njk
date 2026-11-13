@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FitCV Case Study</title>
-  <meta name="description" content="Professional portfolio showcasing technical operations, independent cybersecurity labs, and software projects.">
-  <meta property="og:title" content="FitCV Case Study">
-  <meta property="og:description" content="IT Support &amp; Technical Operations | Gaming and VR Experience | CompTIA Security+">
+  <title>{{ title | default("Bradon Gaathe Macharia | Portfolio") }}</title>
+  <meta name="description" content="{{ description | default('Professional portfolio showcasing technical operations, independent cybersecurity labs, and software projects.') }}">
+  <meta property="og:title" content="{{ title | default('Bradon Gaathe Macharia | Portfolio') }}">
+  <meta property="og:description" content="{{ description | default('IT Support & Technical Operations | Gaming and VR Experience | CompTIA Security+') }}">
   <meta property="og:type" content="website">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self';">
   <meta name="referrer" content="strict-origin-when-cross-origin">
@@ -39,41 +39,7 @@
   </header>
 
   <main id="main-content" tabindex="-1">
-    <article class="container section animate-entrance">
-  <div class="case-study-header">
-    <span class="annotation">Case Study</span>
-    <h1 class="display-font">FitCV</h1>
-<p><div class="cs-meta-grid">
-<div>
-<div class="cs-label">Status</div>
-<div>Prototype / Under Development</div>
-</div>
-<div>
-<div class="cs-label">Implementation</div>
-<div>AI-Assisted Development</div>
-</div>
-<div>
-<div class="cs-label">Intended Users</div>
-<div>Personal career development</div>
-</div>
-</div></p>
-  </div>
-  <div class="cs-body">
-    <div style="width: 100%; margin-bottom: var(--space-lg); border: 1px solid var(--color-line); position: relative;">
-      <span class="visual-label">Fig. 1 — App Interface</span>
-      <img src="/assets/images/fit-cv.png" alt="FitCV interface" style="width: 100%; height: auto; display: block;">
-    </div>
-<p><h2>The Problem</h2>
-<p>Tailoring a CV for every unique job application is a repetitive and error-prone process. FitCV provides independent CV tailoring based on job descriptions, with an optional handoff directly from Opportunity Radar to streamline application preparation.</p></p>
-<p><h2>My Contribution &amp; Approach</h2>
-<p>My contribution is focused on product direction, requirement setting, and rigorous validation of the tailored outputs. The code implementation was heavily AI-assisted, directed by my architectural requirements and workflow design.</p></p>
-<p><h2>Current Status &amp; Evidence</h2>
-<p>Basic CV tailoring logic and handoff processes are prototyped. Deep document formatting and complex edge-case matching remain unverified.</p></p>
-<p><h2>Lessons Learned</h2>
-<p>Learning how to integrate distinct personal tools (Opportunity Radar and FitCV) into a cohesive, automated workflow without losing human oversight.</p></p>
-  </div>
-</article>
-
+    {{ content | safe }}
   </main>
 
   <footer class="site-footer">

@@ -1,0 +1,21 @@
+{
+  "name": "Bradon Gaathe Macharia",
+  "shortName": "Bradon",
+  "url": "https://machariabg.github.io",
+  "email": "machariabg27@gmail.com",
+  "location": "Nairobi, Kenya",
+  "github": "https://github.com/machariaBG",
+  "linkedin": "https://www.linkedin.com/in/macharia-brandon-1077971b8/",
+  "defaultTitle": "Bradon Gaathe Macharia | Portfolio",
+  "defaultDescription": "IT Support & Technical Operations | Digital Forensics & Cybersecurity | CompTIA Security+",
+  "ogImage": "/assets/images/hero-poster.jpg",
+  "nav": [
+    { "label": "About", "url": "/about/" },
+    { "label": "Experience", "url": "/experience/" },
+    { "label": "Home Labs", "url": "/home-labs/" },
+    { "label": "Apps", "url": "/apps/" },
+    { "label": "Interests", "url": "/interests/" },
+    { "label": "CV", "url": "/cv/" },
+    { "label": "Contact", "url": "/contact/" }
+  ]
+}

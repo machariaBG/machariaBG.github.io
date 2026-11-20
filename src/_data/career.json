@@ -1,0 +1,104 @@
+{
+  "summary": "Building a career in IT support and technical operations, drawing on customer-facing gaming operations experience and independent cybersecurity labs.",
+  "roles": [
+    {
+      "title": "Game Operator",
+      "organization": "Q8 Tech, Kuwait",
+      "period": "12 June 2023 – 27 April 2026",
+      "groups": [
+        {
+          "label": "Employer-confirmed technical-support responsibilities",
+          "items": [
+            "Troubleshot hardware and software issues.",
+            "Performed equipment maintenance and basic technical support.",
+            "Coordinated with technical staff to address faults."
+          ]
+        },
+        {
+          "label": "Additional operational responsibilities",
+          "items": [
+            "Assisted customers and operated games.",
+            "Collected payments using cash and KNET.",
+            "Arranged advance escape-room bookings.",
+            "Set up equipment and opened event operations.",
+            "Checked equipment readiness before operation.",
+            "Supervised event activities independently or with another staff member."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Lead Designer & Support Technician",
+      "organization": "Favourlink Solutions",
+      "period": "2021 – 2023",
+      "items": [
+        "Installed and configured Windows, printer drivers and business software for client workstations.",
+        "Provided hardware troubleshooting and support for local network connections.",
+        "Supported end users with graphic design software workflows in a production environment."
+      ]
+    },
+    {
+      "title": "Forensic Science Attaché",
+      "organization": "Directorate of Criminal Investigations (DCI)",
+      "period": "May 2021 – August 2021",
+      "items": [
+        "Maintained rigorous chain-of-custody protocols for sensitive digital and physical evidence, applying high-integrity data protection standards.",
+        "Documented complex investigative procedures with precision to ensure full legal and operational compliance."
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "category": "IT Support & Systems",
+      "items": [
+        "Hardware & software troubleshooting",
+        "Windows installation & configuration",
+        "Printer drivers & business software",
+        "Local network support",
+        "Equipment maintenance & readiness",
+        "Technical-team coordination"
+      ]
+    },
+    {
+      "category": "Security & Digital Forensics",
+      "items": [
+        "CompTIA Security+ (SY0-701)",
+        "Active Directory IAM & NTFS/SMB permissions",
+        "Windows Registry & Scheduled Task persistence analysis",
+        "Live memory acquisition (WinPmem)",
+        "Chain-of-custody & evidence documentation"
+      ]
+    },
+    {
+      "category": "Tools & Lab Environments",
+      "items": [
+        "Windows Server 2022",
+        "Windows 11",
+        "PowerShell",
+        "Sysinternals Suite",
+        "VMware",
+        "Git & GitHub"
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "name": "CompTIA Security+ (SY0-701)",
+      "detail": "Passed 28 August 2026",
+      "badge": "/assets/images/comptia-security-plus.png",
+      "badgeAlt": "CompTIA Security+ Certified"
+    }
+  ],
+  "education": [
+    {
+      "degree": "BSc Forensic Science",
+      "institution": "Kenyatta University, Kenya",
+      "period": "2015 – 2021"
+    }
+  ],
+  "languages": [
+    "English (IELTS Academic 8.0)",
+    "Swahili (Native)",
+    "Arabic (Basic workplace proficiency)"
+  ]
+}

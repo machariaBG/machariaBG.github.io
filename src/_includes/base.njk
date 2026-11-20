@@ -3,14 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ title | default("Bradon Gaathe Macharia | Portfolio") }}</title>
-  <meta name="description" content="{{ description | default('Professional portfolio showcasing technical operations, independent cybersecurity labs, and software projects.') }}">
-  <meta property="og:title" content="{{ title | default('Bradon Gaathe Macharia | Portfolio') }}">
-  <meta property="og:description" content="{{ description | default('IT Support & Technical Operations | Gaming and VR Experience | CompTIA Security+') }}">
+  {%- set pageTitle -%}
+    {%- if page.url == "/" -%}{{ title | default(site.defaultTitle) }}{%- else -%}{{ title }} | {{ site.name }}{%- endif -%}
+  {%- endset %}
+  {%- set pageDesc = description | default(site.defaultDescription) -%}
+  <title>{{ pageTitle }}</title>
+  <meta name="description" content="{{ pageDesc }}">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <meta property="og:title" content="{{ pageTitle }}">
+  <meta property="og:description" content="{{ pageDesc }}">
   <meta property="og:type" content="website">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self';">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:image" content="{{ site.url }}{{ ogImage | default(site.ogImage) }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ pageTitle }}">
+  <meta name="twitter:description" content="{{ pageDesc }}">
+  <meta name="twitter:image" content="{{ site.url }}{{ ogImage | default(site.ogImage) }}">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self';">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <link rel="stylesheet" href="/css/style.css">
+  {%- if page.url == "/" %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "{{ site.name }}",
+    "url": "{{ site.url }}/",
+    "email": "mailto:{{ site.email }}",
+    "jobTitle": "IT Support & Technical Operations",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Nairobi",
+      "addressCountry": "KE"
+    },
+    "sameAs": [
+      "{{ site.github }}",
+      "{{ site.linkedin }}"
+    ],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Kenyatta University"
+    },
+    "hasCredential": {
+      "@type": "EducationalOccupationalCredential",
+      "name": "CompTIA Security+ (SY0-701)",
+      "credentialCategory": "certification"
+    }
+  }
+  </script>
+  {%- endif %}
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -25,15 +68,13 @@
           <path d="M9 6h6v9" />
           <circle cx="15" cy="6" r="1.5" fill="var(--color-amber)" stroke="none"/>
         </svg>
-        Bradon
+        {{ site.shortName }}
       </a>
       <nav class="main-nav" aria-label="Main Navigation">
-        <a href="/about/">About</a>
-        <a href="/experience/">Experience</a>
-        <a href="/home-labs/">Home Labs</a>
-        <a href="/apps/">Apps</a>
-        <a href="/interests/">Interests</a>
-        <a href="/contact/">Contact</a>
+        {%- for item in site.nav %}
+          {%- set isCurrent = (page.url == item.url) or (item.url != "/" and page.url and page.url.startsWith(item.url)) %}
+          <a href="{{ item.url }}"{% if isCurrent %} aria-current="page"{% endif %}>{{ item.label }}</a>
+        {%- endfor %}
       </nav>
     </div>
   </header>
@@ -44,21 +85,21 @@
 
   <footer class="site-footer">
     <div class="container">
-      <div class="social-links" style="display:flex; gap:1.5rem; margin-bottom:1rem;">
-        <a href="https://github.com/machariaBG" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://www.linkedin.com/in/macharia-brandon-1077971b8/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <div class="social-links">
+        <a href="{{ site.github }}" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="{{ site.linkedin }}" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <a href="/cv/">CV</a>
       </div>
-      <p>Bradon Gaathe Macharia. Field Notes &copy; 2026. Built with Eleventy.</p>
+      <p>{{ site.name }}. Field Notes &copy; 2026. Built with Eleventy.</p>
     </div>
   </footer>
 
   <dialog id="gallery-dialog" class="gallery-dialog" aria-label="Image Gallery">
-    <button class="lb-btn lb-close" aria-label="Close gallery" formmethod="dialog">×</button>
+    <button type="button" class="lb-btn lb-close" aria-label="Close gallery">&times;</button>
     <div class="lb-wrapper">
-      <button class="lb-btn lb-prev" aria-label="Previous image">‹</button>
-      <img class="lb-img" id="lb-current-img" src="" alt="">
-      <button class="lb-btn lb-next" aria-label="Next image">›</button>
+      <button type="button" class="lb-btn lb-prev" aria-label="Previous image">&lsaquo;</button>
+      <img class="lb-img" id="lb-current-img" alt="" eleventy:ignore>
+      <button type="button" class="lb-btn lb-next" aria-label="Next image">&rsaquo;</button>
     </div>
     <div class="lb-info" aria-live="polite">
       <span class="lb-title" id="lb-title"></span>
